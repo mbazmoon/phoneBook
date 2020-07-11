@@ -49,3 +49,11 @@ pre-installations
         1.2.use Aspect interceptor after insert phone book send to rabbitmq 
         1.3.listener for inquiry form github repository  and save to phone book
    ###2.search phone book 
+   
+
+#Approach
+The messageQueue system is used to control the traffic load and by setting the status field for each record, by entering each record, it is saved and placed in query mode.
+after save record to repository fire trigger a aspect and push record to rabbitmq for inquiry of github.(use @GitHub)
+In the event of an error in the system during the query, a time service is executed for all records and returned to the query queue.
+QueryDsl is used to search.
+
