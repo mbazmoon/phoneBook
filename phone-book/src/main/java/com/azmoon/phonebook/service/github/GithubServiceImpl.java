@@ -36,7 +36,7 @@ public class GithubServiceImpl implements GithubService {
 	}
 
 
-//	@Scheduled(fixedDelay = 600000)
+	@Scheduled(fixedDelay = 600000)
 	public void githubExhaustedPhoneBook() {
 		List<PhoneBook> phoneBooks = phoneBookService.getExhaustedPhoneBook(PageRequest.of(0, 100));
 		logger.info("exhausted phoneBook number: {}", phoneBooks.size());
