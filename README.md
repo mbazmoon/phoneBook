@@ -4,23 +4,29 @@ pre-installations
 ###1.install monogodb and create database phone_book_db
     mongo/setup.sh
 ###2.install rabitmq and run Script rabbit/rabbit.groovy 
-    set 
+
+    set
+    
         1.username 
         2.password  
         3.host in script
         
+        
 ###3.set connection property in application.properties for mongodb
+
     spring.data.mongodb.host=
     spring.data.mongodb.username=
     spring.data.mongodb.database=
     spring.data.mongodb.password=
     
 ###4.set connection property in application.properties for rabbitMq
+
     spring.rabbitmq.host=
     spring.rabbitmq.username=
     spring.rabbitmq.password=
       
 ###technologies
+
     1.mongodb => for repository
     2.rabbitMq => for async get reponame from github
     3.feign => github api call
@@ -31,10 +37,13 @@ pre-installations
 
 
 ###api documentation in 
+
     http://localhost:6070/azmoon/swagger-ui.html 
 
 #actions:
+
    ###1.add phone book 
+   
         1.1 save to db
         1.2.use Aspect interceptor after insert phone book send to rabbitmq 
         1.3.listener for inquiry form github repository  and save to phone book
