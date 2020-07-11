@@ -3,6 +3,7 @@ pre-installations
 
 ###1.install monogodb and create database phone_book_db
     mongo/setup.sh
+    
 ###2.install rabitmq and run Script rabbit/rabbit.groovy 
 
     set
